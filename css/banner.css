@@ -1,0 +1,94 @@
+/* Banner Section */
+#banner {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#banner .banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 50%; /* Restrict width to keep it compact */
+    padding: 20px;
+}
+
+#banner h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#banner p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+}
+
+#banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    /* opacity: 0.75; */
+}
+
+/* Responsive Styles */
+
+/* Large Screens */
+@media (min-width: 1200px) {
+    #banner h1 {
+        font-size: 4em;
+    }
+
+    #banner p {
+        font-size: 2em;
+    }
+}
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 992px) {
+    #banner {
+        height: 60vh;
+    }
+
+    #banner .banner-content {
+        max-width: 70%; /* Increase content width for smaller screens */
+    }
+
+    #banner h1 {
+        font-size: 2.5em;
+    }
+
+    #banner p {
+        font-size: 1.2em;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    #banner {
+        height: 50vh; /* Reduce height for smaller screens */
+        padding-left: 10px; /* Reduce padding for smaller screens */
+    }
+
+    #banner .banner-content {
+        max-width: 90%; /* Further increase content width for small screens */
+        padding: 10px;
+    }
+
+    #banner h1 {
+        font-size: 2em;
+    }
+
+    #banner p {
+        font-size: 1em;
+    }
+}

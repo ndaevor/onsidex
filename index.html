@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Business</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Poppins Font -->
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/New folder/logo1.png" alt="Logo"> <!-- Replace 'logo.png' with your actual logo file -->
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="nav-links">
+            <li class="close-btn" id="close-btn">&times;</li> <!-- Close button for mobile menu -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- banner with video -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Next-Gen <br>
+                innovative solution</h1>
+            <!-- <p>Empowering businesses through innovative solutions.</p> -->
+        </div>
+        <video autoplay muted loop id="banner-video">
+            <source src="/New folder/Next-Gen Innovative Solutions.mp4" type="video/mp4"> <!-- Replace with your video file -->
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Details about your business.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>Details about the services you offer.</p>
+    </section>
+
+    <section id="clients">
+        <h1>Our Clients</h1>
+        <p>Details about your clients.</p>
+    </section>
+
+    <section id="team">
+        <h1>Our Team</h1>
+        <p>Details about your team.</p>
+    </section>
+
+    <section id="blogs">
+        <h1>Blogs</h1>
+        <p>Details about your blogs.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
