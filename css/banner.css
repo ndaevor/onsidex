@@ -1,8 +1,9 @@
+
 /* Banner Section */
 #banner {
     position: relative;
-    height: 70vh;
-    display: flex;
+    height: 80vh;
+    display: block;
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
@@ -56,12 +57,15 @@
 }
 
 .banner-stats p {
-    margin: 24px;
+    margin: 16px; /* Remove margin for even spacing */
     white-space: nowrap; /* Prevent line break */
+    font-size: 12px;
+
 }
 
 /* Video Background */
-#banner-video {
+#banner-video-desktop,
+#banner-video-mobile {
     position: absolute;
     top: 0;
     left: 0;
@@ -70,6 +74,11 @@
     object-fit: cover;
     z-index: 1;
     /* opacity: 0.75; */
+}
+
+/* Hide the mobile video by default */
+#banner-video-mobile {
+    display: none;
 }
 
 /* Responsive Styles */
@@ -96,7 +105,7 @@
 /* Tablets and Smaller Desktops */
 @media (max-width: 992px) {
     #banner {
-        height: 60vh;
+        height: 50vh;
     }
 
     #banner .banner-content {
@@ -122,8 +131,18 @@
 
 /* Smartphones */
 @media (max-width: 600px) {
+    /* Hide the desktop video */
+    #banner-video-desktop {
+        display: none;
+    }
+
+    /* Show the mobile video */
+    #banner-video-mobile {
+        display: block;
+    }
+
     #banner {
-        height: 60vh;
+        height: 50vh;
         padding-left: 10px;
     }
 
@@ -146,6 +165,14 @@
 
     .banner-stats {
         font-size: 0.8em;
-        flex-wrap: wrap; /* Wrap to the next line if it doesn't fit */
+        flex-wrap: wrap; /* Wrap items to the next line as needed */
+    }
+}
+
+/* Smaller Smartphones */
+@media (max-width: 400px) {
+    #banner {
+        height: 62vh;
+        padding-left: 10px;
     }
 }

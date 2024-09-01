@@ -21,7 +21,8 @@ nav {
 }
 
 .logo img {
-    height: 60px; /* Adjust height based on your logo size */
+    display: flex;
+    height: 100px; /* Adjust height based on your logo size */
 }
 
 .menu-icon {
@@ -137,6 +138,7 @@ section h1 {
         justify-content: center;
         align-items: center;
         transition: 0.3s;
+        font-size: 12px;
 
         
 
@@ -192,4 +194,9 @@ section h1 {
         width: 100%;
         padding: 10px;
     }
+    .logo img {
+        display: flex;
+        height: 60px; /* Adjust height based on your logo size */
+    }
+
 }
