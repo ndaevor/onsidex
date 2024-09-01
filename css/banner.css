@@ -14,7 +14,7 @@
 #banner .banner-content {
     position: relative;
     z-index: 2;
-    max-width: 50%; /* Restrict width to keep it compact */
+    max-width: 50%;
     padding: 20px;
 }
 
@@ -26,9 +26,41 @@
 
 #banner p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Add space below the paragraph */
 }
 
+.banner-btn {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    background-color: #e31b23; /* Red color for the button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space below the button */
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #c4161d; /* Darker red on hover */
+}
+
+.banner-stats {
+    display: flex;
+    gap: 15px; /* Space between each text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em; /* Smaller font size */
+    margin-top: 10px; /* Space above the stats row */
+}
+
+.banner-stats p {
+    margin: 24px;
+    white-space: nowrap; /* Prevent line break */
+}
+
+/* Video Background */
 #banner-video {
     position: absolute;
     top: 0;
@@ -49,7 +81,15 @@
     }
 
     #banner p {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+
+    .banner-btn {
+        font-size: 1.2em;
+    }
+
+    .banner-stats {
+        font-size: 1em;
     }
 }
 
@@ -60,7 +100,7 @@
     }
 
     #banner .banner-content {
-        max-width: 70%; /* Increase content width for smaller screens */
+        max-width: 70%;
     }
 
     #banner h1 {
@@ -68,19 +108,27 @@
     }
 
     #banner p {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .banner-btn {
+        font-size: 1em;
+    }
+
+    .banner-stats {
+        font-size: 0.9em;
     }
 }
 
 /* Smartphones */
 @media (max-width: 600px) {
     #banner {
-        height: 50vh; /* Reduce height for smaller screens */
-        padding-left: 10px; /* Reduce padding for smaller screens */
+        height: 60vh;
+        padding-left: 10px;
     }
 
     #banner .banner-content {
-        max-width: 90%; /* Further increase content width for small screens */
+        max-width: 90%;
         padding: 10px;
     }
 
@@ -89,6 +137,15 @@
     }
 
     #banner p {
-        font-size: 1em;
+        font-size: 0.9em;
+    }
+
+    .banner-btn {
+        font-size: 0.9em;
+    }
+
+    .banner-stats {
+        font-size: 0.8em;
+        flex-wrap: wrap; /* Wrap to the next line if it doesn't fit */
     }
 }
