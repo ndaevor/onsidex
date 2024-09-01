@@ -142,13 +142,14 @@
     }
 
     #banner {
-        height: 50vh;
+        height: 95vh;
         padding-left: 10px;
+        /* justify-content: end; */
     }
 
     #banner .banner-content {
         max-width: 90%;
-        padding: 10px;
+        padding-top: 230px;
     }
 
     #banner h1 {
@@ -172,7 +173,7 @@
 /* Smaller Smartphones */
 @media (max-width: 400px) {
     #banner {
-        height: 62vh;
+        height: 92vh;
         padding-left: 10px;
     }
 }
