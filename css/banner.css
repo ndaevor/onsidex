@@ -80,6 +80,14 @@
 #banner-video-mobile {
     display: none;
 }
+#banner-video-desktop::-webkit-media-controls {
+    display: none !important;
+}
+
+#banner-video-mobile::-webkit-media-controls {
+    display: none !important;
+}
+
 
 #banner-video-desktop::-webkit-media-controls {
     display: none !important;
