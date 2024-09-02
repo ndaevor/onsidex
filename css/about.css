@@ -1,0 +1,96 @@
+/* Base Styles */
+#about {
+    background-color: black;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#about h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#about h1::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e31b23; /* Red color for the line */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+#about h1:hover::after {
+    width: 100%;
+}
+.about-content{
+    padding: 20px;
+   
+}
+
+#about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+/* Responsive Styles */
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 992px) {
+    #about h1 {
+        font-size: 2em;
+    }
+
+    #about p {
+        font-size: 0.9em;
+    }
+
+    #about {
+        padding: 60px 10px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    nav{
+        height: 90px;
+    }
+    #about h1 {
+        font-size: 1.8em;
+    }
+
+    #about p {
+        font-size: 0.8em;
+    }
+
+    #about {
+        padding: 40px 10px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+    nav{
+        height: 90px;
+    }
+    #about h1 {
+        font-size: 1.6em;
+    }
+
+    #about p {
+        font-size: 0.7em;
+    }
+
+    #about {
+        padding: 30px 5px;
+    }
+}

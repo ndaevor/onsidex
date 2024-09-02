@@ -81,6 +81,15 @@
     display: none;
 }
 
+#banner-video-desktop::-webkit-media-controls {
+    display: none !important;
+}
+
+#banner-video-mobile::-webkit-media-controls {
+    display: none !important;
+}
+
+
 /* Responsive Styles */
 
 /* Large Screens */
@@ -135,6 +144,7 @@
     #banner-video-desktop {
         display: none;
     }
+    
 
     /* Show the mobile video */
     #banner-video-mobile {
@@ -145,7 +155,7 @@
         height: 80vh;
         padding-left: 10px;
         /* justify-content: end; */
-        margin-top: -15px;
+        margin-top: -10px;
     }
 
     #banner .banner-content {
@@ -174,7 +184,7 @@
 /* Smaller Smartphones */
 @media (max-width: 400px) {
     #banner {
-        height: 95vh;
+        height: 98vh;
         padding-left: 10px;
         margin-top: -20px;
     }
