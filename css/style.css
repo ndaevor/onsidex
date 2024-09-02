@@ -18,10 +18,11 @@ nav {
     align-items: center;
     padding: 10px 20px;
     box-sizing: border-box;
-    height: 95px;
+    height: 110px;
 }
 
 .logo img {
+    padding-left: 20px;
     display: flex;
     height: 95px; /* Adjust height based on your logo size */
 }
