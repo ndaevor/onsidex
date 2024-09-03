@@ -1,9 +1,10 @@
 /* Services Section */
 #services {
-    padding: 80px 20px;
+    padding: 10px 20px;
     background-color: black;
     text-align: center;
     margin-top: 0px;
+    scroll-margin-top: 55px; 
 }
 
 #services h2 {
@@ -33,15 +34,7 @@
 #services h2:hover::after {
     width: 100%; /* Line expands to full width on hover */
 }
-/* Hide scrollbars for WebKit browsers */
-.service-box::-webkit-scrollbar {
-    display: none;
-}
 
-/* Hide scrollbars for Firefox */
-.service-box {
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
 
 .services-container {
     display: flex;
@@ -62,7 +55,7 @@
     text-align: left;
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform transition */
     max-height: 300px; /* Set a max height for scrollable content */
-    overflow: auto; /* Allow scrolling if content exceeds box size */
+    /* overflow: auto; Allow scrolling if content exceeds box size */
 }
 
 .service-box:hover {
@@ -81,6 +74,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Align content in column */
+}
+.service-box-content {
+    overflow: auto; /* Allow scrolling for content */
+    max-height: 150px; /* Adjust based on your design needs */
+}
+
+.service-box-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbars for Firefox */
+.service-box-content {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .service-box h3 {
@@ -124,9 +130,13 @@
         margin: 10px;
         min-width: 250px; /* Minimum width to ensure readability */
         max-height: 300px; /* Ensure the height for scrolling */
-        overflow-y: auto; /* Vertical scroll if needed */
+        /* overflow-y: auto; Vertical scroll if needed */
         flex-direction: column; /* Stack content vertically */
         align-items: flex-start; /* Align items at the start */
+    }
+    .service-box-content{
+        overflow-y: auto;
+        max-height: 140px;
     }
 
     .service-logo {
