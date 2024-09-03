@@ -22,7 +22,7 @@ nav {
 }
 
 .logo img {
-    padding-left: 20px;
+    padding-left: 10px;
     display: flex;
     height: 95px; /* Adjust height based on your logo size */
 }
