@@ -2,9 +2,9 @@
 #about {
     background-color: black; /* Black background */
     color: white; /* White text color */
-    padding: 60px 20px;
+    padding: 30px 25px;
     margin-top: 0px;
-    scroll-margin-top: 50px; 
+    scroll-margin-top: 90px; 
 }
 
 .about-content {
@@ -17,15 +17,32 @@
 .about-column {
     flex: 1;
     max-width: 48%;
-   
 }
 
 .about-column h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
-    border-bottom: 2px solid red; /* Red underline */
-    padding-bottom: 10px;
+    padding-bottom: 10px; /* Space for the line */
+    position: relative; /* Required for pseudo-element positioning */
+    display: inline-block;
+}
+
+.about-column h1::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px; /* Thickness of the line */
+    background-color: #e31b23; /* Line color matching with services heading */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.about-column h1:hover::after {
+    width: 100%; /* Line expands to full width on hover */
 }
 
 .about-column p {
@@ -69,8 +86,6 @@
     font-size: 1em;
     margin: 5px 0;
 }
-
-
 
 /* Responsive Styles */
 @media (max-width: 992px) {
