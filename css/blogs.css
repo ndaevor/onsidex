@@ -1,0 +1,126 @@
+/* Blogs Section */
+#blogs {
+    padding: 60px 20px;
+    background-color: black;
+    text-align: center;
+}
+
+#blogs h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#blogs h2::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #e31b23;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#blogs h2:hover::after {
+    width: 100%;
+}
+
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    color: #e31b23;
+    margin-bottom: 10px;
+}
+
+.blog-content .blog-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #999;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #e31b23;
+    text-decoration: none;
+    border-bottom: 1px solid #e31b23;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.read-more:hover {
+    color: white;
+    border-color: white;
+}
+
+/* Responsive Styles */
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 992px) {
+    .blog-box {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    .blog-box {
+        width: 100%;
+    }
+
+    .blog-content h3 {
+        font-size: 1.2em;
+    }
+
+    .blog-content p {
+        font-size: 0.9em;
+    }
+}
