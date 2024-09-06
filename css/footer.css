@@ -1,0 +1,202 @@
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black; /* Update to match your theme */
+    padding: 30px;
+    color: white; /* Adjust color to match your site */
+    margin-top: 0px;
+  
+  }
+  
+  .contact-details, .contact-form {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .contact-details {
+    max-width: 45%;
+  }
+  
+  .contact-form {
+    max-width: 50%;
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+
+  .contact-details h2 {
+    font-family: 'Poppins', sans-serif; /* Matching your font */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .contact-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .contact-details a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #007bff; /* Link color */
+  }
+
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+
+  form label, form input, form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: red  ;
+  }
+
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #contact form button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    
+  }
+
+  /* #contact form button:hover {
+    background-color: orangered;
+  } */
+
+  #contact h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: white;
+    position: relative; /* Required for pseudo-element positioning */
+    display: inline-block;
+    padding-bottom: 10px; /* Space for the line */
+}
+
+
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px; /* Thickness of the line */
+    background-color: #e31b23; /* Line color matching button color */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#contact h2:hover::after {
+    width: 100%; /* Line expands to full width on hover */
+}
+.contact-details img{
+    width: 30px;
+    height: auto;
+    /* display: inline-flexbox; */
+    
+}
+
+
+
+  @media screen and (max-width: 768px) {
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form{
+        padding: 20px;
+    }
+    .contact-details, .contact-form {
+      max-width: 100%;
+    }
+    
+    .contact-details {
+      margin-top: 20px;
+    }
+  }
+
+
+
+
+
+
+/* Project Start Section */
+#project-start {
+    background-color: black;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.project-content h2 {
+    font-size: 2em;
+    color: white; /* Darker text color for heading */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-content p {
+    font-size: 1.2em;
+    color: #666; /* Gray for the paragraph text */
+    margin-bottom: 30px;
+}
+
+.project-content a {
+    color: red;
+    text-decoration: none;
+    color: white;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
+}
+
+.request-proposal-btn {
+    background-color: red; /* Button background color */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    
+}
+
+.request-proposal-btn:hover {
+    background-color: green; /* Darker shade on hover */
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-content h2 {
+        font-size: 1.8em;
+    }
+
+    .project-content p {
+        font-size: 1.1em;
+    }
+
+    .request-proposal-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
