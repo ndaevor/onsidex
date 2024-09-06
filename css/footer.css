@@ -73,6 +73,13 @@
     transition: background-color 0.3s ease;
     
   }
+  #contact form label{
+    text-align: start;
+  }
+  #contact form input, textarea{
+    background-color: black;
+    color: white;
+  }
 
   /* #contact form button:hover {
     background-color: orangered;
@@ -136,7 +143,7 @@
 
 
 
-/* Project Start Section */
+/* Project Start Section above the footer section */
 #project-start {
     background-color: black;
     padding: 50px 20px;
@@ -198,5 +205,54 @@
     .request-proposal-btn {
         font-size: 1em;
         padding: 10px 20px;
+    }
+}
+
+
+/* below the footer section */
+/* Footer Section */
+#footer {
+    background-color: black; /* Dark background color */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Text color for the footer */
+    margin-top: 0px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for the footer content */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-text, .copyright {
+    font-size: 0.9em;
+    color: #ccc; /* Light gray color for the text */
+    margin: 0;
+}
+
+.footer-logo {
+    height: 50px; /* Adjust logo size as needed */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-text, .copyright {
+        margin-bottom: 10px;
+        font-size: 0.8em;
+    }
+
+    .footer-logo {
+        margin: 10px 0;
+        height: 40px; /* Adjust logo size for smaller screens */
     }
 }
