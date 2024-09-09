@@ -1,156 +1,159 @@
-#team{
-    scroll-margin-top: 90px; 
+/* General section styles */
+.our-team {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #000;
+  color: #fff;
 }
 
-.our-team {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #000;
-    color: #fff;
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
 
-  }  
-  .section-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: white;
-    position: relative; /* Required for pseudo-element positioning */
-    display: inline-block;
-    padding-bottom: 10px; /* Space for the line */
-  }
-  
-  .section-title::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 4px; /* Thickness of the line */
-    background-color: #e31b23; /* Line color matching button color */
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
-  }
-  
-  
-  
-  .section-title:hover::after {
-    width: 100%; /* Line expands to full width on hover */
-  }
-  
+/* Section title hover effect */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #e31b23;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
 
-  
-  /* CEO Section (Full Row) */
-  .ceo-section {
-    display: flex;
+.section-title:hover::after {
+  width: 100%;
+}
+
+/* CEO Section (Full Row) */
+.ceo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.member-img-ceo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.ceo-details {
+  text-align: left;
+  max-width: 600px;
+}
+
+.ceo-details h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #e60000;
+  display: inline-flex;
+  align-items: center;
+}
+
+.member-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.member-description {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.linkedin-link {
+  margin-left: 10px;
+}
+
+.linkedin-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* Team Member Grid */
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 20px;
+  width: calc(50% - 40px); /* 2 in a row on desktop */
+  box-sizing: border-box;
+}
+
+.member-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.member-details {
+  text-align: left;
+  max-width: 500px;
+}
+
+.member-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e60000;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+/* Mobile and responsive adjustments */
+@media (max-width: 768px) {
+  .team-member, .ceo-section {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* background-color: #1a1a1a; */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 50px;
+    text-align: center;
   }
-  
-  .member-img-ceo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  
-  .ceo-details {
-    text-align: left;
-    max-width: 600px;
-  }
-  
-  .member-name {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #e60000;
-  }
-  
-  .member-title {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .member-description {
-    font-size: 1em;
+
+  .member-img, .member-img-ceo {
     margin-bottom: 15px;
+    margin-right: 0;
   }
-  
+
+  .team-member {
+    width: 100%; /* Full width on mobile */
+  }
+
   .linkedin-link {
-    display: inline-block;
     margin-top: 10px;
   }
   
-  .linkedin-icon {
-    width: 25px;
-    height: 25px;
-  }
-  
-  /* Team Member Grid */
+  /* Adjust team-row to stack members */
   .team-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
   }
-  
-  .team-member {
-    display: flex;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 20px;
-    width: calc(50% - 40px);
-    box-sizing: border-box;
-    align-items: center;
-  }
-  
-  .member-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  
-  .member-details {
-    text-align: left;
-    max-width: 500px;
-  }
-  
-  @media (max-width: 768px) {
-    /* Stack all members in a column on mobile */
-    .team-member{
-        flex-direction: column;
-        text-align: center;
-    }
-    .team-member {
-      width: 100%;
-      margin: 15px 0;
-    }
-  
-    .ceo-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .member-img-ceo {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .ceo-details {
-      text-align: center;
-      max-width: 100%;
-    }
-    .team-row{
-    
-      flex-direction: column;
-      text-align: center;
+}
 
-    }
-  }
-  
+/* Ensure all images are circular */
+.member-img, .member-img-ceo {
+  border-radius: 50%;
+}
