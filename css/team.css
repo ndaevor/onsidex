@@ -1,9 +1,20 @@
 /* General section styles */
 .our-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center align the section content */
+  background-color: black; /* Update to match your theme */
+  padding: 30px;
+  color: white;
+  margin-top: 0px;
+  scroll-margin-top: 67px;
+}
+
+#team {
+  padding: 60px 20px;
+  background-color: black;
   text-align: center;
-  padding: 50px 0;
-  background-color: #000;
-  color: #fff;
+  margin-top: 0px;
 }
 
 .section-title {
@@ -19,15 +30,15 @@
 /* Section title hover effect */
 .section-title::after {
   content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  background-color: #e31b23;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #e31b23;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
 .section-title:hover::after {
@@ -42,7 +53,8 @@
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 50px;
-  flex-wrap: wrap;
+  text-align: center; /* Center the text */
+  flex-direction: column; /* Stack the image and text vertically on smaller screens */
 }
 
 .member-img-ceo {
@@ -50,11 +62,11 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 20px;
+  margin-bottom: 20px; /* Space between the image and text */
 }
 
 .ceo-details {
-  text-align: left;
+  text-align: center;
   max-width: 600px;
 }
 

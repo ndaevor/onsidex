@@ -34,3 +34,18 @@ window.addEventListener('load', function() {
     // Show the content
     document.getElementById('content').style.display = 'block';
 });
+
+
+
+//scroll effect
+const carousel = document.querySelector('.carousel');
+let currentIndex = 0;
+const totalItems = document.querySelectorAll('.carousel-item').length;
+
+function autoScroll() {
+  currentIndex = (currentIndex + 1) % totalItems;
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Auto-scroll every 5 seconds
+setInterval(autoScroll, 5000);
