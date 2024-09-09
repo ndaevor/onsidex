@@ -4,8 +4,10 @@
     justify-content: space-between;
     background-color: black; /* Update to match your theme */
     padding: 30px;
-    color: white; /* Adjust color to match your site */
+    color: white; 
     margin-top: 0px;
+    scroll-margin-top: 67px; 
+
   
   }
   
@@ -118,6 +120,12 @@
     /* display: inline-flexbox; */
     
 }
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
 
 
 
@@ -129,6 +137,7 @@
     .contact-form{
         padding: 20px;
     }
+    
     .contact-details, .contact-form {
       max-width: 100%;
     }
