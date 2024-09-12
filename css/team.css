@@ -69,14 +69,16 @@
   margin-left: 20px;
   text-align: start;
   max-width: 600px;
+  
 }
 
 .ceo-details h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #e60000;
   display: inline-flex;
   align-items: center;
+  margin-bottom: 0px;
 }
 
 .member-title {

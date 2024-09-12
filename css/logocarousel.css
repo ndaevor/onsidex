@@ -1,49 +1,42 @@
-#logo-carousel {
-    margin-top: 50px;
-    overflow: hidden; /* Hide overflow to make it scroll horizontally */
-    background-color: black; /* Match the theme */
-    padding: 20px 0;
-    margin-top: 0px;
-  }
-  
-  .logo-carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo-carousel {
-    display: flex;
-    animation: scroll 20s linear infinite;
-  }
-  
-  .logo-carousel img {
-    width: 90px; /* Adjust the logo size as needed */
-    height: auto;
-    margin: 0 20px; /* Space between logos */
-  
-    transition: filter 0.3s ease;
-  }
-  
-  .logo-carousel img:hover {
-    filter: grayscale(0%); /* Restore color on hover */
-  }
-  
-  /* Animation for scrolling */
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
+@keyframes slide {
+    from {
+      transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(-100%);
     }
   }
   
-  /* Responsive - Adjust logo size for mobile */
-  @media (max-width: 768px) {
-    .logo-carousel img {
-      width: 70px;
-      margin: 0 10px;
-    }
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    background-color: black;
   }
   
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 10s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 90px;
+    margin: 0 40px;
+  }
