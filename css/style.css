@@ -5,6 +5,7 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     line-height: 1.6;
+    background-color: black;
 }
 
 nav {

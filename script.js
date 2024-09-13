@@ -27,12 +27,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // loader
+// window.addEventListener('load', function() {
+//     // Hide the loading screen
+//     document.getElementById('loading-screen').style.display = 'none';
+    
+//     // Show the content
+//     document.getElementById('content').style.display = 'block';
+// });
+
 window.addEventListener('load', function() {
     // Hide the loading screen
     document.getElementById('loading-screen').style.display = 'none';
     
     // Show the content
     document.getElementById('content').style.display = 'block';
+});
+
+// Fallback for slower loading on mobile devices
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        if (document.getElementById('loading-screen').style.display !== 'none') {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    }, 5000); // Fallback time after which loading screen hides (5 seconds)
 });
 
 
